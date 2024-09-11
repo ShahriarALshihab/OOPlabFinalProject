@@ -1,25 +1,29 @@
 public class Patient {
     private String name;
     private int age;
-    private String contact;
-    
-    public Patient(String name, int age, String contact) {
+
+    public Patient(String name, int age) {
         this.name = name;
         this.age = age;
-        this.contact = contact;
     }
-    
+
     public String getName() {
         return name;
-
     }
-    
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getAge() {
         return age;
-
     }
-    
-    public String getContact() {
-        return contact; 
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void bookAppointment(Doctor doctor) {
+        System.out.println("Booking appointment for " + name + " with Doctor " + doctor.getName());
     }
 }
